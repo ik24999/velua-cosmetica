@@ -7,7 +7,9 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:api.github.com)",
       "mcp__notion__API-post-search",
-      "mcp__notion__API-get-block-children"
+      "mcp__notion__API-get-block-children",
+      "Skill(commit)",
+      "Skill(commit:*)"
     ],
     "additionalDirectories": [
       "C:\\Users\\iker\\.claude\\skills\\systematic-debugging",
