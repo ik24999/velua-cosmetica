@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporal — Velua Cosmética Natural</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#f6f7f4', 100: '#e8ebe3', 200: '#d4d9ca', 300: '#b5bea6',
+                            400: '#95a182', 500: '#7a8868', 600: '#6b7f5e', 700: '#4a5740',
+                            800: '#3d4736', 900: '#343c2f',
+                        },
+                        cream: {
+                            50: '#fdfcf9', 100: '#f9f5ed', 200: '#f5f0e8', 300: '#ede4d3', 400: '#e0d1b8',
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+        .product-img { mix-blend-mode: multiply; }
+    </style>
+</head>
+<body class="bg-cream-50 text-gray-800">
+
+    <!-- Barra superior -->
+    <div class="bg-sage-700 text-white text-center text-xs py-2 px-4 tracking-wider">
+        ENVÍO GRATIS EN PEDIDOS SUPERIORES A 35€ · MUESTRAS GRATIS EN CADA PEDIDO
+    </div>
+
+    <!-- Navegación -->
+    <nav class="bg-cream-50 border-b border-cream-300 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <button id="menu-toggle" class="md:hidden p-2 -ml-2" aria-label="Abrir menú">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+                <a href="index.html" class="font-serif text-2xl md:text-3xl font-semibold tracking-wide text-sage-800">VELUA</a>
+                <div class="hidden md:flex items-center space-x-8 text-sm tracking-wide">
+                    <a href="facial.html" class="hover:text-sage-600 transition-colors">FACIAL</a>
+                    <a href="corporal.html" class="text-sage-600 font-medium">CORPORAL</a>
+                    <a href="capilar.html" class="hover:text-sage-600 transition-colors">CAPILAR</a>
+                    <a href="mas-vendidos.html" class="hover:text-sage-600 transition-colors">MÁS VENDIDOS</a>
+                    <a href="sobre-nosotros.html" class="hover:text-sage-600 transition-colors">SOBRE NOSOTROS</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button aria-label="Buscar" class="p-2 hover:text-sage-600 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+                    </button>
+                    <a href="carrito.html" aria-label="Carrito" class="p-2 hover:text-sage-600 transition-colors relative">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/></svg>
+                        <span class="absolute -top-0.5 -right-0.5 bg-sage-600 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-cream-300 bg-cream-50">
+            <div class="px-4 py-4 space-y-3 text-sm tracking-wide">
+                <a href="facial.html" class="block py-2 hover:text-sage-600">FACIAL</a>
+                <a href="corporal.html" class="block py-2 text-sage-600 font-medium">CORPORAL</a>
+                <a href="capilar.html" class="block py-2 hover:text-sage-600">CAPILAR</a>
+                <a href="mas-vendidos.html" class="block py-2 hover:text-sage-600">MÁS VENDIDOS</a>
+                <a href="sobre-nosotros.html" class="block py-2 hover:text-sage-600">SOBRE NOSOTROS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner categoría -->
+    <section class="bg-sage-100 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sage-600 text-sm tracking-widest mb-3">CUIDADO CORPORAL</p>
+            <h1 class="font-serif text-4xl md:text-5xl text-sage-900 mb-4">Corporal</h1>
+            <p class="text-gray-600 max-w-xl mx-auto">Lociones, aceites y exfoliantes que nutren tu piel de pies a cabeza con la pureza de los ingredientes naturales.</p>
+        </div>
+    </section>
+
+    <!-- Grid de productos -->
+    <section class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                <a href="producto.html?id=locion-corporal" class="group">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                        <img src="https://images.pexels.com/photos/5797999/pexels-photo-5797999.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Loción Corporal" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-sm font-medium mb-1">Loción Corporal Hidratante</h3>
+                    <p class="text-xs text-gray-500 mb-2">Karité + Vitamina E</p>
+                    <p class="text-sage-700 font-medium">24,90 €</p>
+                </a>
+                <a href="producto.html?id=aceite-corporal" class="group">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                        <img src="https://images.pexels.com/photos/4465830/pexels-photo-4465830.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Aceite Corporal" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-sm font-medium mb-1">Aceite Corporal Nutritivo</h3>
+                    <p class="text-xs text-gray-500 mb-2">Argán + Jojoba</p>
+                    <p class="text-sage-700 font-medium">22,90 €</p>
+                </a>
+                <a href="producto.html?id=exfoliante-corporal" class="group">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                        <img src="https://images.pexels.com/photos/6800938/pexels-photo-6800938.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Exfoliante Corporal" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-sm font-medium mb-1">Exfoliante Corporal Detox</h3>
+                    <p class="text-xs text-gray-500 mb-2">Sal Marina + Carbón Activo</p>
+                    <p class="text-sage-700 font-medium">19,90 €</p>
+                </a>
+                <a href="producto.html?id=gel-ducha" class="group">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                        <img src="https://images.pexels.com/photos/10574057/pexels-photo-10574057.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Gel de Ducha" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-sm font-medium mb-1">Gel de Ducha Revitalizante</h3>
+                    <p class="text-xs text-gray-500 mb-2">Menta + Eucalipto</p>
+                    <p class="text-sage-700 font-medium">14,90 €</p>
+                </a>
+                <a href="producto.html?id=crema-manos" class="group">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                        <img src="https://images.pexels.com/photos/29044029/pexels-photo-29044029.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Crema de Manos" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-sm font-medium mb-1">Crema de Manos Reparadora</h3>
+                    <p class="text-xs text-gray-500 mb-2">Cera de Abeja + Lavanda</p>
+                    <p class="text-sage-700 font-medium">12,90 €</p>
+                </a>
+                <a href="producto.html?id=manteca-corporal" class="group">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                        <img src="https://images.pexels.com/photos/8015895/pexels-photo-8015895.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Manteca Corporal" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-sm font-medium mb-1">Manteca Corporal Intensiva</h3>
+                    <p class="text-xs text-gray-500 mb-2">Cacao + Coco</p>
+                    <p class="text-sage-700 font-medium">26,50 €</p>
+                </a>
+                <a href="producto.html?id=desodorante-natural" class="group">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                        <img src="https://images.pexels.com/photos/3785784/pexels-photo-3785784.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Desodorante Natural" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-sm font-medium mb-1">Desodorante Natural</h3>
+                    <p class="text-xs text-gray-500 mb-2">Piedra de Alumbre + Salvia</p>
+                    <p class="text-sage-700 font-medium">9,90 €</p>
+                </a>
+                <a href="producto.html?id=crema-pies" class="group">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                        <img src="https://images.pexels.com/photos/10186829/pexels-photo-10186829.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Crema de Pies" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-sm font-medium mb-1">Crema Reparadora de Pies</h3>
+                    <p class="text-xs text-gray-500 mb-2">Urea + Árbol de Té</p>
+                    <p class="text-sage-700 font-medium">14,50 €</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sage-900 text-sage-200 py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-2 md:col-span-1">
+                    <a href="index.html" class="font-serif text-2xl text-white tracking-wide">VELUA</a>
+                    <p class="text-sm text-sage-400 mt-3 leading-relaxed">Cosmética natural elaborada en España con ingredientes botánicos sostenibles.</p>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-medium tracking-wider mb-4">TIENDA</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="facial.html" class="hover:text-white transition-colors">Facial</a></li>
+                        <li><a href="corporal.html" class="hover:text-white transition-colors">Corporal</a></li>
+                        <li><a href="capilar.html" class="hover:text-white transition-colors">Capilar</a></li>
+                        <li><a href="mas-vendidos.html" class="hover:text-white transition-colors">Más vendidos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-medium tracking-wider mb-4">INFORMACIÓN</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="sobre-nosotros.html" class="hover:text-white transition-colors">Sobre nosotros</a></li>
+                        <li><a href="contacto.html" class="hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-medium tracking-wider mb-4">AYUDA</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Envíos y devoluciones</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Preguntas frecuentes</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Política de privacidad</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-sage-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-sage-500">© 2025 Velua Cosmetics. Todos los derechos reservados.</p>
+                <div class="flex items-center space-x-5">
+                    <a href="#" class="text-sage-400 hover:text-white transition-colors" aria-label="Instagram">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069ZM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"/></svg>
+                    </a>
+                    <a href="#" class="text-sage-400 hover:text-white transition-colors" aria-label="Facebook">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073Z"/></svg>
+                    </a>
+                    <a href="#" class="text-sage-400 hover:text-white transition-colors" aria-label="TikTok">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07Z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    </script>
+</body>
+</html>
