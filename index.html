@@ -61,6 +61,25 @@
         .product-img {
             mix-blend-mode: multiply;
         }
+    
+        .product-watermark { position: relative; }
+        .product-watermark::after {
+            content: "";
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            width: 40px;
+            height: 40px;
+            background-image: url('images/logo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.25;
+            filter: grayscale(100%) brightness(1.2);
+            pointer-events: none;
+            z-index: 10;
+        }
+    
     </style>
 </head>
 
@@ -227,7 +246,7 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                 <!-- Producto 1 -->
                 <a href="producto.html?id=serum-vitamina-c" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/4735943/pexels-photo-4735943.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
                             alt="Sérum Revitalizante"
                             class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
@@ -238,7 +257,7 @@
                 </a>
                 <!-- Producto 2 -->
                 <a href="producto.html?id=crema-hidratante-24h" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/6167443/pexels-photo-6167443.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
                             alt="Crema Hidratante"
                             class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
@@ -249,7 +268,7 @@
                 </a>
                 <!-- Producto 3 -->
                 <a href="producto.html?id=aceite-corporal" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/4465830/pexels-photo-4465830.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
                             alt="Aceite Corporal"
                             class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
@@ -260,7 +279,7 @@
                 </a>
                 <!-- Producto 4 -->
                 <a href="producto.html?id=mascarilla-capilar" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/34939744/pexels-photo-34939744.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
                             alt="Mascarilla Capilar"
                             class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">

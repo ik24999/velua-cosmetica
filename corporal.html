@@ -30,6 +30,25 @@
         body { font-family: 'Inter', system-ui, sans-serif; }
         .font-serif { font-family: 'Playfair Display', Georgia, serif; }
         .product-img { mix-blend-mode: multiply; }
+    
+        .product-watermark { position: relative; }
+        .product-watermark::after {
+            content: "";
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            width: 40px;
+            height: 40px;
+            background-image: url('images/logo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.25;
+            filter: grayscale(100%) brightness(1.2);
+            pointer-events: none;
+            z-index: 10;
+        }
+    
     </style>
 </head>
 <body class="bg-cream-50 text-gray-800">
@@ -95,7 +114,7 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
                 <a href="producto.html?id=locion-corporal" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/5797999/pexels-photo-5797999.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Loción Corporal" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-sm font-medium mb-1">Loción Corporal Hidratante</h3>
@@ -103,7 +122,7 @@
                     <p class="text-sage-700 font-medium">24,90 €</p>
                 </a>
                 <a href="producto.html?id=aceite-corporal" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/4465830/pexels-photo-4465830.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Aceite Corporal" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-sm font-medium mb-1">Aceite Corporal Nutritivo</h3>
@@ -111,7 +130,7 @@
                     <p class="text-sage-700 font-medium">22,90 €</p>
                 </a>
                 <a href="producto.html?id=exfoliante-corporal" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/6800938/pexels-photo-6800938.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Exfoliante Corporal" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-sm font-medium mb-1">Exfoliante Corporal Detox</h3>
@@ -119,7 +138,7 @@
                     <p class="text-sage-700 font-medium">19,90 €</p>
                 </a>
                 <a href="producto.html?id=gel-ducha" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/10574057/pexels-photo-10574057.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Gel de Ducha" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-sm font-medium mb-1">Gel de Ducha Revitalizante</h3>
@@ -127,7 +146,7 @@
                     <p class="text-sage-700 font-medium">14,90 €</p>
                 </a>
                 <a href="producto.html?id=crema-manos" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/29044029/pexels-photo-29044029.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Crema de Manos" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-sm font-medium mb-1">Crema de Manos Reparadora</h3>
@@ -135,7 +154,7 @@
                     <p class="text-sage-700 font-medium">12,90 €</p>
                 </a>
                 <a href="producto.html?id=manteca-corporal" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/8015895/pexels-photo-8015895.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Manteca Corporal" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-sm font-medium mb-1">Manteca Corporal Intensiva</h3>
@@ -143,7 +162,7 @@
                     <p class="text-sage-700 font-medium">26,50 €</p>
                 </a>
                 <a href="producto.html?id=desodorante-natural" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/3785784/pexels-photo-3785784.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Desodorante Natural" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-sm font-medium mb-1">Desodorante Natural</h3>
@@ -151,7 +170,7 @@
                     <p class="text-sage-700 font-medium">9,90 €</p>
                 </a>
                 <a href="producto.html?id=crema-pies" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/10186829/pexels-photo-10186829.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Crema de Pies" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-sm font-medium mb-1">Crema Reparadora de Pies</h3>

@@ -30,6 +30,25 @@
         body { font-family: 'Inter', system-ui, sans-serif; }
         .font-serif { font-family: 'Playfair Display', Georgia, serif; }
         .product-img { mix-blend-mode: multiply; }
+    
+        .product-watermark { position: relative; }
+        .product-watermark::after {
+            content: "";
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            width: 40px;
+            height: 40px;
+            background-image: url('images/logo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.25;
+            filter: grayscale(100%) brightness(1.2);
+            pointer-events: none;
+            z-index: 10;
+        }
+    
     </style>
 </head>
 <body class="bg-cream-50 text-gray-800">
@@ -95,7 +114,7 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
                 <a href="producto.html?id=serum-vitamina-c" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 relative flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 relative flex items-center justify-center p-4 product-watermark">
                         <span class="absolute top-2 left-2 bg-sage-700 text-white text-[10px] px-2 py-1 tracking-wider z-10">#1 VENTAS</span>
                         <img src="https://images.pexels.com/photos/4735943/pexels-photo-4735943.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Sérum Vitamina C" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -105,7 +124,7 @@
                     <p class="text-sage-700 font-medium">34,90 €</p>
                 </a>
                 <a href="producto.html?id=crema-hidratante-24h" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 relative flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 relative flex items-center justify-center p-4 product-watermark">
                         <span class="absolute top-2 left-2 bg-sage-700 text-white text-[10px] px-2 py-1 tracking-wider z-10">#2 VENTAS</span>
                         <img src="https://images.pexels.com/photos/6167443/pexels-photo-6167443.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Crema Hidratante" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -115,7 +134,7 @@
                     <p class="text-sage-700 font-medium">28,50 €</p>
                 </a>
                 <a href="producto.html?id=aceite-corporal" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 relative flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 relative flex items-center justify-center p-4 product-watermark">
                         <span class="absolute top-2 left-2 bg-sage-700 text-white text-[10px] px-2 py-1 tracking-wider z-10">#3 VENTAS</span>
                         <img src="https://images.pexels.com/photos/4465830/pexels-photo-4465830.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Aceite Corporal" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -125,7 +144,7 @@
                     <p class="text-sage-700 font-medium">22,90 €</p>
                 </a>
                 <a href="producto.html?id=mascarilla-capilar" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 relative flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 relative flex items-center justify-center p-4 product-watermark">
                         <span class="absolute top-2 left-2 bg-sage-700 text-white text-[10px] px-2 py-1 tracking-wider z-10">#4 VENTAS</span>
                         <img src="https://images.pexels.com/photos/34939744/pexels-photo-34939744.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Mascarilla Capilar" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -135,7 +154,7 @@
                     <p class="text-sage-700 font-medium">19,90 €</p>
                 </a>
                 <a href="producto.html?id=champu-sin-sulfatos" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/6496459/pexels-photo-6496459.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Champú Sin Sulfatos" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <p class="text-[10px] text-sage-600 tracking-wider mb-1">CAPILAR</p>
@@ -144,7 +163,7 @@
                     <p class="text-sage-700 font-medium">16,90 €</p>
                 </a>
                 <a href="producto.html?id=serum-acido-hialuronico" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/29675497/pexels-photo-29675497.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Sérum Ácido Hialurónico" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <p class="text-[10px] text-sage-600 tracking-wider mb-1">FACIAL</p>
@@ -153,7 +172,7 @@
                     <p class="text-sage-700 font-medium">32,90 €</p>
                 </a>
                 <a href="producto.html?id=locion-corporal" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/5797999/pexels-photo-5797999.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Loción Corporal" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <p class="text-[10px] text-sage-600 tracking-wider mb-1">CORPORAL</p>
@@ -162,7 +181,7 @@
                     <p class="text-sage-700 font-medium">24,90 €</p>
                 </a>
                 <a href="producto.html?id=contorno-ojos" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/8015777/pexels-photo-8015777.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Contorno de Ojos" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <p class="text-[10px] text-sage-600 tracking-wider mb-1">FACIAL</p>
@@ -171,7 +190,7 @@
                     <p class="text-sage-700 font-medium">24,90 €</p>
                 </a>
                 <a href="producto.html?id=aceite-capilar" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/6915314/pexels-photo-6915314.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Aceite Capilar" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <p class="text-[10px] text-sage-600 tracking-wider mb-1">CAPILAR</p>
@@ -180,7 +199,7 @@
                     <p class="text-sage-700 font-medium">21,90 €</p>
                 </a>
                 <a href="producto.html?id=exfoliante-corporal" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/6800938/pexels-photo-6800938.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Exfoliante Corporal" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <p class="text-[10px] text-sage-600 tracking-wider mb-1">CORPORAL</p>
@@ -189,7 +208,7 @@
                     <p class="text-sage-700 font-medium">19,90 €</p>
                 </a>
                 <a href="producto.html?id=crema-noche" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/18748210/pexels-photo-18748210.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Crema de Noche" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <p class="text-[10px] text-sage-600 tracking-wider mb-1">FACIAL</p>
@@ -198,7 +217,7 @@
                     <p class="text-sage-700 font-medium">36,90 €</p>
                 </a>
                 <a href="producto.html?id=manteca-corporal" class="group">
-                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4">
+                    <div class="aspect-square bg-cream-100 overflow-hidden mb-3 flex items-center justify-center p-4 product-watermark">
                         <img src="https://images.pexels.com/photos/8015895/pexels-photo-8015895.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Manteca Corporal" class="max-w-full max-h-full object-contain product-img group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <p class="text-[10px] text-sage-600 tracking-wider mb-1">CORPORAL</p>
